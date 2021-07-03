@@ -1,0 +1,76 @@
+% !TEX root = non_convex_Courtney.tex
+
+% Macros for the Non-Convex Catalyst Paper
+
+%\input{macros}
+
+\newcommand{\vs}{}
+%\newcommand{\vs}{\vspace*{0.0cm}}
+\newcommand{\cnt}{k}
+\newcommand{\pr}{{\rm prox}}
+\newcommand{\eg}{\emph{e.g.}}
+
+\renewcommand\epsilon\varepsilon
+%\newcommand{\dom}{\textrm{dom }} %counter
+\newcommand{\smthpara}{\kappa} % the smoothing parameter 
+\newcommand{\smthparacvx}{\kappa_{\text{\rm cvx}}} % the smoothing
+                                % parameter  convex
+\newcommand{\smthparainit}{\kappa_0} 
+\newcommand{\env}{f_{\smthpara}}
+ % envelope of the prox; f_\kappa(x; y) = f(x) + kappa/2 ||x-y||^2
+\newcommand{\accx}{\tilde{x}} %the \acc_x \approx argmin f_{\kappa}(x;y_k)
+\newcommand{\proxx}{\bar{x}} %the \proxx \approx argmin f_{\kappa}(x;
+                             %x_{k-1})
+\newcommand{\bproxx}{\bar{x}^{b}} %the \proxx \approx argmin f_{\kappa}(x;
+                         
+                            %x_{k-1})
+%\newcommand{\prox}{p_{\frac{1}{\smthpara} f}} %writes prox: kappa f ->
+                                %1/kappa f
+% \newcommand{\prox}{\text{prox}} 
+\newcommand{\weakcnx}{\rho} %weak convexity parameter
+% \newcommand{\argmin}{\operatornamewithlimits{argmin}} %argmin
+\newcommand{\sccnt}{i} %Outer counter for strong convexity
+\newcommand{\scnx}{\mu} %Strong convexity constant
+\newcommand{\smth}{L} %smooth parameter \beta->L
+\newcommand{\globalcnt}{b} %global counter for complexity
+\newcommand{\li}{\operatornamewithlimits{liminf}} %argmin
+%\newcommand{\mtd}{\mathcal{M}} %optimization method M used as sub-routine
+
+%% Strong Convexity w/ Estimate Sequences %%%%%%%%%%
+\newcommand{\estseqpara}{\lambda} %Estimating sequence constants
+\newcommand{\estseq}{\Phi} %Estimating sequence functions
+\newcommand{\estseqquad}{\gamma} %Constant multiplied by the
+                                %quad. term in estimating sequence
+\newcommand{\estseqcenter}{\estseq^*} % center of the estimating sequence
+%% General Math %%%%%%%%%%%%%%
+\newcommand{\ip}[1] {\langle #1 \rangle } %inner product
+\newcommand{\norm}[1] {\left \| #1 \right \|} %norm
+\newcommand{\dist}{{\rm dist}} %distance
+\newcommand{\R}{{\mathbb R}} %Real numbers
+\newcommand{\N}{{\mathbb N}} %Natural numbers
+\newcommand{\mtd}{{\mathcal M}} %Optimization method M
+\newcommand{\proxi}{\text{prox}} %proximal operator
+\newcommand{\Real}{{\mathbb R}} %Real numbers
+\newcommand{\oR}{\overline \R} %Reals + infinity
+
+
+%%%%%%%%% Theorems %%%%%%%%%%%%%
+%\newtheorem{claim}{Claim}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{defn}[theorem]{Definition}
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{pa}{Part}
+%\newtheorem{subclaim}{Subclaim}
+%\newtheorem{example}{Example}[section]
+
+%%%Random stuff%%%
+\newcommand{{\newalgosp}}{Basic 4WD-Catalyst~}%basic algo, with small space after the name
+\newcommand{{\newalgo}}{Basic 4WD-Catalyst}%basic algo, no space
+\newcommand{{\autonewalgosp}}{4WD-Catalyst~}%adaptive algo, with small space after the name , it was before 4WD-Catalyst-Automatic
+\newcommand{{\autonewalgo}}{4WD-Catalyst}%adaptive algo, no space it was before 4WD-Catalyst-Automatic
+\newcommand{\linesearch}{{Auto-adapt}}
+
+\newcommand{\mylabel}[2]{#2\def\@currentlabel{#2}\label{#1}}
+\newcommand{\mynote}[1]{{\bf \color{blue}{#1} }\\}
